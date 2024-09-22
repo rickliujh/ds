@@ -54,10 +54,10 @@ func (h *Heap[T]) heapify(i int, swap func(i, j int)) {
 	r := h.rightChild(i)
 
 	largest := i
-	if h.cmp(h.arr[l], h.arr[largest]) > 0 {
+	if l <= h.size && h.cmp(h.arr[l], h.arr[largest]) > 0 {
 		largest = l
 	}
-	if h.cmp(h.arr[r], h.arr[largest]) > 0 {
+	if r <= h.size && h.cmp(h.arr[r], h.arr[largest]) > 0 {
 		largest = r
 	}
 
