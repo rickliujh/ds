@@ -1,4 +1,4 @@
-# CLRS P3 S12 Binary Search Trees
+# CLRS P3 C12 Binary Search Trees
 
 from dataclasses import dataclass
 from typing import Any
