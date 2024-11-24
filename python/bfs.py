@@ -9,16 +9,14 @@ class Color(enum):
     GERY
     BLACK
 
+InfiniteDistance = -1
+
 @dataclass
 class Vertex:
     p: Vertex
     d: int
     c: Color 
     key: str
-
-# type AdjacencyList = list[list[Vertex]]
-
-InfiniteDistance = -1
 
 def BFS(G: dict[Vertex, list[Vertex]], s: Vertex) -> None:
     for l in G:
