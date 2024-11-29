@@ -68,9 +68,9 @@ def DFS_edge_type(u: Vertex, v: Vertex) -> DirectedEdgeType:
         elif u.d > v.d:
             return DirectedEdgeType.CROSS
     
-def DFS_edge_type_undirected_graph(u: Vertex, v: Vertex) -> DirectedEdgeType:
+def DFS_edge_type_undirected_graph(u: Vertex, v: Vertex) -> UndirectedEdgeType:
     if v.c is Color.WHITE:
-        return DirectedEdgeType.TREE
+        return UndirectedEdgeType.TREE
     else:
-        return DirectedEdgeType.BACK
+        return UndirectedEdgeType.BACK
     
