@@ -1,4 +1,4 @@
-# CLRS P6 C20 Graph Breadth first search
+# CLRS P6 C20.2 Graph Breadth first search
 
 from dataclasses import dataclass
 from enum import Enum
@@ -19,8 +19,8 @@ class Vertex:
     key: str
 
 def BFS(G: dict[Vertex, list[Vertex]], s: Vertex) -> None:
-    for l in G:
-        for j in l:
+    for i in G.values():
+        for j in i:
             j.p = None; j.d = InfiniteDistance; j.c = Color.WHITE
 
     s.p = None; s.d = 0; s.c = Color.GREY
